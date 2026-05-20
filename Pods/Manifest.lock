@@ -1,0 +1,16 @@
+PODS:
+  - DigiokycSDK (2.0.5)
+
+DEPENDENCIES:
+  - DigiokycSDK
+
+SPEC REPOS:
+  trunk:
+    - DigiokycSDK
+
+SPEC CHECKSUMS:
+  DigiokycSDK: b5d6e5a3cc77e8978ba7629d5efa9da410928964
+
+PODFILE CHECKSUM: 600756e4a2d854554e8db68135beb29e6d071a92
+
+COCOAPODS: 1.16.2

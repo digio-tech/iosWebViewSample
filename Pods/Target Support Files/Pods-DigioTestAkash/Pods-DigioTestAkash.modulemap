@@ -1,0 +1,6 @@
+module Pods_DigioTestAkash {
+  umbrella header "Pods-DigioTestAkash-umbrella.h"
+
+  export *
+  module * { export * }
+}
