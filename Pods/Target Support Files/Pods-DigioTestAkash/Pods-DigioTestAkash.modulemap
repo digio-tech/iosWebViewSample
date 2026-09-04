@@ -1,4 +1,4 @@
-module Pods_DigioTestAkash {
+framework module Pods_DigioTestAkash {
   umbrella header "Pods-DigioTestAkash-umbrella.h"
 
   export *

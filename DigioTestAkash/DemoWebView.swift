@@ -78,6 +78,7 @@ class DemoWebView : UIViewController, CLLocationManagerDelegate, WKUIDelegate {
         let baseUrl_Prod = "https://app.digio.in"
         let baseUrl_Sandbox = "https://ext.digio.in"
         let baseUrl_Local = "http://10.50.2.115:8083"
+        let baseUrl_DEV = "https://dev-app.digio.in"
         
         var mapParams = [String:String]()
         
@@ -85,7 +86,7 @@ class DemoWebView : UIViewController, CLLocationManagerDelegate, WKUIDelegate {
         // pass your logo here
         mapParams["logo"] = "https://www.digio.in/images/digio_blue.png"
         
-        mapParams["token_id"] = "GWT260519160940754S8FW39GWWVGI8S"
+        mapParams["token_id"] = "GWT26072117023571093BH4D3AX1X1MS"
         
         //adding configuring the theme
         var themeDictionary : [String: Any] = [:]
@@ -99,13 +100,13 @@ class DemoWebView : UIViewController, CLLocationManagerDelegate, WKUIDelegate {
         
         mapParams["theme"] = jsonString.addingPercentEncoding(withAllowedCharacters: .alphanumerics.union(CharacterSet(charactersIn: "~-_.")))
         
-        // pass your redirect url then digio will re-direct on same url after jounery
+        // pass your redirect url then  digio will re-direct on same url after jounery
         mapParams["redirect_url"] = "https://your-redirect-url.in"
         
-//        var url : String = (baseUrl_Sandbox)
-        var url : String = (baseUrl_Prod)
+        var url : String = (baseUrl_DEV)
+//        var url : String = (baseUrl_Prod)
         url.append("/#/gateway/login/")
-        url.append("KID260519160940735IQ33TPQ79UU4BR") // documentId/NachId/KycId
+        url.append("KID260721170235583JUBFWRQDRGXD4J") // documentId/NachId/KycId
         url.append("/")
         url.append(String(txnId)) // random number
         url.append("/")

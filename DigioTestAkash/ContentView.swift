@@ -11,35 +11,45 @@ struct ContentView: View {
     @State private var showUIWrapper = false
 
         var body: some View {
-            VStack {
-                if #available(iOS 15.0, *) {
-                    Image(systemName: "globe")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
-                }
-                Text("Hello, world!")
-                    .onTapGesture {
-                        print("Text clicked!")
-                        showUIWrapper = true
+            NavigationView {
+                VStack {
+                    if #available(iOS 15.0, *) {
+                        Image(systemName: "globe")
+                            .imageScale(.large)
+                            .foregroundStyle(.tint)
                     }
-            }
-            .padding()
-            .sheet(isPresented: $showUIWrapper) {
-//                UIWrapperController()
-                UIWrapperController2()
+                    Text("Hello, world!")
+                        .onTapGesture {
+                            print("Text clicked!")
+                            showUIWrapper = true
+                        }
+
+                    NavigationLink(isActive: $showUIWrapper) {
+                        UIWrapperController(onFinish: { showUIWrapper = false })
+//                        UIWrapperController2()
+                    } label: {
+                        EmptyView()
+                    }
+                    .hidden()
+                }
+                .padding()
             }
         }
 }
 
 struct UIWrapperController: UIViewControllerRepresentable {
     typealias UIViewControllerType = MyViewController
-    
+
+    var onFinish: () -> Void
+
     func makeUIViewController(context: Context) -> MyViewController {
-        return MyViewController()
+        let vc = MyViewController()
+        vc.onFinish = onFinish
+        return vc
     }
-    
+
     func updateUIViewController(_ uiViewController: MyViewController, context: Context) {
-        
+
     }
 }
 

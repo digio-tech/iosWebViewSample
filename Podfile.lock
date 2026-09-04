@@ -1,16 +1,20 @@
 PODS:
-  - DigiokycSDK (2.0.5)
+  - DigioCaptureKit (2.0.6)
+  - DigiokycSDK (2.0.7)
 
 DEPENDENCIES:
+  - DigioCaptureKit
   - DigiokycSDK
 
 SPEC REPOS:
   trunk:
+    - DigioCaptureKit
     - DigiokycSDK
 
 SPEC CHECKSUMS:
-  DigiokycSDK: b5d6e5a3cc77e8978ba7629d5efa9da410928964
+  DigioCaptureKit: 0afeb0cdf85c7e59b085d33a3fa6ad257732e82b
+  DigiokycSDK: 8df7d13760df992441a1dff7ee497d4e2d2b2a9f
 
-PODFILE CHECKSUM: 600756e4a2d854554e8db68135beb29e6d071a92
+PODFILE CHECKSUM: 05c8c34a0e9e19b99ac843c84aef04b4fe1f520e
 
 COCOAPODS: 1.16.2

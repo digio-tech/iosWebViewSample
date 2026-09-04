@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9D06E3E6B5719AE031468687B74225DA"
-               BuildableName = "libPods-DigioTestAkash.a"
+               BuildableName = "Pods_DigioTestAkash.framework"
                BlueprintName = "Pods-DigioTestAkash"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

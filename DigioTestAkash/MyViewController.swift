@@ -11,17 +11,16 @@ import DigiokycSDK
 class MyViewController: UIViewController,DigioKycResponseDelegate {
     let delayInSeconds = 2.0
     var activityIndicator: UIActivityIndicatorView!
+    var onFinish: (() -> Void)?
 
     func onDigioKycResponseSuccess(successResponse: String) {
         print("Response Success --> \(successResponse)")
-        self.dismiss(animated: true, completion: nil)
-
+        onFinish?()
     }
-    
+
     func onDigioKycResponseFailure(failureResponse: String) {
         print("Response Failure --> \(failureResponse)")
-        self.dismiss(animated: true, completion: nil)
-
+        onFinish?()
     }
     
     func onGateWayEvent(event: String) {
@@ -46,12 +45,12 @@ class MyViewController: UIViewController,DigioKycResponseDelegate {
         do{
             try DigioKycBuilder()
                 .withController(viewController: self)
-                .setDocumentId(documentId: "KID260417181505702SWHKPFREAWGLOB")
+                .setDocumentId(documentId: "KID26090415332394084WPATKAKQ31C2")
                 .setIdentifier(identifier: "akash.kumar@digio.in")
                 .setLogo(logo: "")
                 .setAdditionalParams(additionalParams: [:])
                 .setEnvironment(environment: .PRODUCTION)
-                .setTokenId(tokenId: "GWT2604171815057124L7ATHFDOVW67S")
+                .setTokenId(tokenId: "GWT2609041533239497RTO9PF5SOCWJS")
                 .setPrimaryColor(hexColor: "#28b842")
                 .build()
         }catch {
